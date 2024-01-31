@@ -7,6 +7,10 @@ class Francais:
     def hello():
         return "Bonjour"
 
+    @staticmethod
+    def bye():
+        return "Au revoir!"
+
 
 class English:
     @staticmethod
@@ -16,3 +20,7 @@ class English:
     @staticmethod
     def hello():
         return "Hello"
+
+    @staticmethod
+    def bye():
+        return "Bye bye!"

@@ -24,6 +24,8 @@ class MyTestCase(unittest.TestCase):
     def test_palindrome_en(self):
         self.assertIn(chaine[::-1] + os.linesep + "Well sayed!", is_pal(chaine, English))
 
+    def test_palindrome_en_hello(self):
+        self.assertIn("Hello" + os.linesep + chaine, is_pal(chaine, English))
 
 if __name__ == '__main__':
     unittest.main()

@@ -3,6 +3,7 @@ import os
 
 from src.langs import English, Francais
 from src.finder import is_pal
+from utilities.stub_lang import StubLang
 
 chaine = "kayak"
 

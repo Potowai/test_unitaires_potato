@@ -1,2 +1,2 @@
 def is_pal(chaine):
-    pass
+    return chaine[::-1]

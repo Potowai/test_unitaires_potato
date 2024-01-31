@@ -27,5 +27,11 @@ class MyTestCase(unittest.TestCase):
     def test_palindrome_en_hello(self):
         self.assertIn("Hello" + os.linesep + chaine, is_pal(chaine, English))
 
+    def test_bye_multiple_langs(self):
+        with self.subTest(chaine):
+            self.assertIn("Au revoir!", is_pal(chaine))
+            self.assertIn("Bye bye!", is_pal(chaine, English))
+
+
 if __name__ == '__main__':
     unittest.main()

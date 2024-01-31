@@ -10,16 +10,16 @@ chaine = "kayak"
 class MyTestCase(unittest.TestCase):
 
     def test_mirror(self):
-        self.assertIn(chaine[::-1], is_pal(chaine))
+        self.assertIn(chaine[::-1], is_pal(chaine, StubLang))
 
     def test_palindrome(self):
-        self.assertIn(chaine[::-1] + os.linesep + "Bien dit!", is_pal(chaine))
+        self.assertIn(chaine[::-1] + os.linesep + "FINE", is_pal(chaine, StubLang))
 
     def test_hello(self):
-        self.assertIn("Bonjour" + os.linesep + chaine, is_pal(chaine))
+        self.assertIn("HI" + os.linesep + chaine, is_pal(chaine, StubLang))
 
     def test_bye(self):
-        self.assertIn("Au revoir!", is_pal(chaine))
+        self.assertIn("ESC!", is_pal(chaine, StubLang))
 
     def test_palindrome_en(self):
         self.assertIn(chaine[::-1] + os.linesep + "Well sayed!", is_pal(chaine, English))
@@ -29,7 +29,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_bye_multiple_langs(self):
         with self.subTest(chaine):
-            self.assertIn("Au revoir!", is_pal(chaine))
+            self.assertIn("ESC", is_pal(chaine, StubLang))
             self.assertIn("Bye bye!", is_pal(chaine, English))
 
 

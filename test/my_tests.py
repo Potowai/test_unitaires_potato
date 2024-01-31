@@ -16,5 +16,8 @@ class MyTestCase(unittest.TestCase):
     def test_hello(self):
         self.assertIn("Bonjour" + os.linesep + chaine, is_pal(chaine))
 
+    def test_bye(self):
+        self.assertIn("Au revoir!", is_pal(chaine))
+
 if __name__ == '__main__':
     unittest.main()
